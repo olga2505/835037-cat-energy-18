@@ -9,27 +9,18 @@
 }
 
 .example__title {
-  padding: 26px 0 0 0;
-  margin: 0 0 33px 0;
-  font-size: 36px;
-  color: @font-color;
-  font-weight: normal;
+  .title( @line-height:60px, @margin:0 0 23px 0, @padding: 18px 0 0 0);
 }
 
 .example__text {
-  padding: 0 1px 0 0;
-  margin: 0 0 25px 0;
-  font-size: 14px;
-  line-height: 18px;
-  color: @light-color;
-  font-family: @alt-font-family;
-  font-weight: normal;
+  .text(@margin: 0 0 25px 0, @padding: 0 1px 0 0);
+  font-family: @second-font;
 }
 
 .example__inner {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 20px 0;
+  margin: 0 0 19px 0;
 }
 
 .example__result {
@@ -38,42 +29,30 @@
 }
 
 .example__figures {
+  .text-other(@font-size: 24px, @line-height: 24px, @margin: 0, @padding: 12px 0 0 0);
   width: 124px;
   height: 56px;
   border: @line;
   border-radius: 2px;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: @font-color;
   text-align: center;
-  padding: 12px 0 0 0;
-  margin: 0;
 }
 
 .example__value {
-  font-family: @alt-font-family;
-  font-size: 12px;
-  line-height: 12px;
-  color: @light-color;
+  .text-small(@line-height: 12px, @margin: -8px 0 0 18px, @padding: 0 2px 0 2px);
   width: 87px;
-  padding: 0 2px 0 2px;
   text-align: center;
   background-color: @background;
-  margin: -8px 0 0 18px;
 }
 
 .example__expenses {
+  .text-other(@font-size: 14px, @line-height: 20px, @margin:  0 0 34px 0);
   display: flex;
   justify-content: center;
-  font-size: 14px;
-  color: @font-color;
-  text-transform: uppercase;
-  margin: 0 0 37px 0;
 }
 
 .example__image {
   display: block;
-  margin: 0 0 35px -18px;
+  margin: 0 0 33px -18px;
 }
 
 .example__before-after {
@@ -82,12 +61,8 @@
 }
 
 .example__difference {
+  .text-other( @line-height: 20px, @margin:0 15px 0 20px);
   display: flex;
-  font-size: 16px;
-  color: @font-color;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0 15px 0 20px;
 }
 
 .example__scale {

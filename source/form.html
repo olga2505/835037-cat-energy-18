@@ -39,15 +39,15 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="name">Имя:*</label>
-                <input class="form__input" type="text" name="name" id="name" placeholder="Барсик">
+                <input class="form__input form__input--information" type="text" name="name" id="name" placeholder="Барсик">
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>
-                <input class="form__input" type="text" name="weight" id="weight" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7">
               </li>
               <li class="form__item">
                 <label class="form__label" for="age">Возраст (лет):</label>
-                <input class="form__input" type="text" name="age" id="age" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="age" id="age" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -68,20 +68,20 @@
             </ul>
           </fieldset>
           <fieldset class="form__contakts">
-            <legend class="form__caption">Контактные данные (владельца кота)</legend>
+            <legend class="form__caption form__caption--contact">Контактные данные (владельца кота)</legend>
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__label" for="email">E-mail:*</label>
-                <input class="form__input form__input--email" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
+                <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
+                <input class="form__input form__input--email form__input--contact" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
               </li>
               <li class="form__item">
-                <label class="form__label" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+                <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
+                <input class="form__input form__input--tel form__input--contact" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
               </li>
             </ul>
           </fieldset>
           <div class="form__comment">
-            <legend class="form__caption">Комментарий</legend>
+            <legend class="form__caption form__caption--comment">Комментарий</legend>
             <textarea class="form__input form__input--comment" type="text" placeholder="Расскажите обо всех повадках кота" ></textarea>
           </div>
           <fieldset class="form__addition">
@@ -113,7 +113,7 @@
     <footer class="footer">
       <section class="cooperation">
         <div class="cooperation__wrapper">
-          <h2 class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <p class="cooperation__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <div class="map">

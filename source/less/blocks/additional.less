@@ -4,10 +4,12 @@
 }
 
 .additional__title {
-  margin: 51px 0 45px 0;
-  font-size: 24px;
-  color: @font-color;
-  font-weight: normal;
+  .title(@font-size:24px, @font-weight: 400, @line-height:24px, @margin:0 0 46px 0,   @padding: 51px 0 0 0);
+  position: relative;
+
+  &::before {
+    .line(@top: 64px)
+  }
 }
 
 .additional__list {
@@ -15,19 +17,14 @@
 }
 
 .additional__name {
-  font-size: 16px;
-  color: #222222;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin: 0 0 12px 0;
+  .text-other(@margin: 0 0 12px 0, @color: #222222, @padding: 0);
 }
 
 .additional__view {
+  .text(@line-height: 14px, @margin: 0 0 2px 0);
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  font-family: @alt-font-family;
-  color: @light-color;
+  font-family: @second-font;
 }
 
 .additional__value {

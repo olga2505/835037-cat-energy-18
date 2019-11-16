@@ -12,18 +12,15 @@
   align-items: flex-end;
   margin: 0 0 64px 0;
   position: relative;
-}
 
-.present__wrapp::before  {
-  content: "";
-  position: absolute;
-  width: 56px;
-  height: 61px;
-  top: 65px;
-  left: 112px;
-  background-image: url(../img/icon-gift.svg);
-  background-repeat: no-repeat;
-  border-radius: 0 0;
+  &::before {
+    .element();
+    width: 56px;
+    height: 61px;
+    top: 65px;
+    left: 112px;
+    background-image: url(../img/icon-gift.svg);
+  }
 }
 
 .present__text {
@@ -31,7 +28,7 @@
   line-height: 20px;
   color: white;
   text-align: center;
-  font-family: @alt-font-family;
+  font-family: @second-font;
   width: 165px;
   margin: 0;
   padding: 0 0 42px 0;

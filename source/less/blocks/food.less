@@ -11,18 +11,11 @@
 }
 
 .food__title {
- .title();
-}
-
-.food__title {
-  margin: 0;
+ .title(@color: white);
 }
 
 .food__slogan {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 14px;
-  text-transform: uppercase;
+  .text(@line-height: 14px, @margin: 0, @color: white, @text-transform: uppercase, @padding: 0);
 }
 
 .food__image {
