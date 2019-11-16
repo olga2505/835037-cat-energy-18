@@ -1,5 +1,6 @@
 .info-wrapper {
-  padding: @padding;
+  padding: @padding-mob;
+  margin: 0 0 20px 0;
 }
 
 .info__title {
@@ -10,14 +11,12 @@
 }
 
 .info__list {
-  list-style: none;
-  padding: 0;
+  .list-reset();
   color: @light-color;
   font-family: @alt-font-family;
   font-size: 14px;
   padding: 0 0 0 80px;
   line-height: 18px;
-  margin: 0 0 50px 0;
 }
 
 .info__item {

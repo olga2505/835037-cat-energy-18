@@ -54,15 +54,15 @@
           <fieldset class="form__target">
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__radio" type="radio" name="target" id="slim" checked>
-                <label class="form__label form__label--radio" for="slim">Похудение</label>
+                <input class="form__radio visually-hidden" type="radio" name="target" id="slim" checked>
+                <label class="form__label-radio" for="slim">Похудение</label>
               </li>
               <li class="form__item">
-                <input class="form__radio" type="radio" name="target" id="mass">
+                <input class="form__radio visually-hidden" type="radio" name="target" id="mass">
                 <label class="form__label-radio" for="mass">Набор массы</label>
               </li>
               <li class="form__item">
-                <input class="form__radio" type="radio" name="target" id="advice">
+                <input class="form__radio visually-hidden" type="radio" name="target" id="advice">
                 <label class="form__label-radio" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -72,35 +72,35 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="email">E-mail:*</label>
-                <input class="form__input form__input--email" type="text" name="email" id="email">
+                <input class="form__input form__input--email" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
               </li>
-              <li>
+              <li class="form__item">
                 <label class="form__label" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel" type="text" name="tel" id="tel">
+                <input class="form__input form__input--tel" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
               </li>
             </ul>
           </fieldset>
           <div class="form__comment">
-            <p class="form__caption">Комментарий</p>
-            <input class="form__input form__input--comment" type="text" placeholder="Расскажите обо всех повадках кота">
+            <legend class="form__caption">Комментарий</legend>
+            <textarea class="form__input form__input--comment" type="text" placeholder="Расскажите обо всех повадках кота" ></textarea>
           </div>
           <fieldset class="form__addition">
-            <legend class="form__caption">Дополнительно</legend>
+            <legend class="form__caption form__caption--check">Дополнительно</legend>
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="sweetener" checked>
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="sweetener" checked>
                 <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
               </li>
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="water">
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="water">
                 <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
               </li>
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="milk">
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="milk">
                 <label class="form__label form__label--checkbox" for="milk">Молоко</label>
               </li>
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="vitamins">
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="vitamins">
                 <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
