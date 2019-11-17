@@ -3,28 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image" src="https://via.placeholder.com/33x38" width="33" height="38" alt="Логотип Кэт энерджи">
-        <img class="logo__text" src="https://via.placeholder.com/101x18" width="101" height="18" alt="Логотип Кэт энерджи">
+        <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
+        <!-- <button class="main-nav__toggle" type="button">
+          <img src="img/icon-mobile-menu.svg" width="24" height="18" alt="Меню">
+        </button> -->
+        <!-- <div class="main-nav__wrapper"> -->
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
             <li class="site-list__item site-list__item--active">
-              <a>Каталог продукции</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
       </nav>
     </header>
     <main  class="page-main">
@@ -36,80 +39,81 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="name">Имя:*</label>
-                <input class="form__input" type="text" name="name" id="name" placeholder="Барсик">
+                <input class="form__input form__input--information" type="text" name="name" id="name" placeholder="Барсик">
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>
-                <input class="form__input" type="text" name="weight" id="weight" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7">
               </li>
               <li class="form__item">
                 <label class="form__label" for="age">Возраст (лет):</label>
-                <input class="form__input" type="text" name="age" id="age" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="age" id="age" placeholder="7">
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__target">
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__radio" type="radio" name="target" id="slim" checked>
-                <label class="form__label form__label--radio" for="slim">Похудение</label>
+                <input class="form__radio visually-hidden" type="radio" name="target" id="slim" checked>
+                <label class="form__label-radio" for="slim">Похудение</label>
               </li>
               <li class="form__item">
-                <input class="form__radio" type="radio" name="target" id="mass">
+                <input class="form__radio visually-hidden" type="radio" name="target" id="mass">
                 <label class="form__label-radio" for="mass">Набор массы</label>
               </li>
               <li class="form__item">
-                <input class="form__radio" type="radio" name="target" id="advice">
+                <input class="form__radio visually-hidden" type="radio" name="target" id="advice">
                 <label class="form__label-radio" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__contakts">
-            <legend class="form__caption">Контактные данные (владельца кота)</legend>
+            <legend class="form__caption form__caption--contact">Контактные данные (владельца кота)</legend>
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__label" for="email">E-mail:*</label>
-                <input class="form__input form__input--email" type="text" name="email" id="email">
+                <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
+                <input class="form__input form__input--email form__input--contact" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
               </li>
-              <li>
-                <label class="form__label" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel" type="text" name="tel" id="tel">
+              <li class="form__item">
+                <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
+                <input class="form__input form__input--tel form__input--contact" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
               </li>
             </ul>
           </fieldset>
           <div class="form__comment">
-            <p class="form__caption">Комментарий</p>
-            <input class="form__input form__input--comment" type="text" placeholder="Расскажите обо всех повадках кота">
+            <legend class="form__caption form__caption--comment">Комментарий</legend>
+            <textarea class="form__input form__input--comment" type="text" placeholder="Расскажите обо всех повадках кота" ></textarea>
           </div>
           <fieldset class="form__addition">
-            <legend class="form__caption">Дополнительно</legend>
+            <legend class="form__caption form__caption--check">Дополнительно</legend>
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="sweetener" checked>
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="sweetener" checked>
                 <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
               </li>
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="water">
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="water">
                 <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
               </li>
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="milk">
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="milk">
                 <label class="form__label form__label--checkbox" for="milk">Молоко</label>
               </li>
               <li class="form__item">
-                <input class="form__input" type="checkbox" name="caption" id="vitamins">
+                <input class="form__check visually-hidden" type="checkbox" name="caption" id="vitamins">
                 <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <a class="form__order button">Отправить заявку</a>
+          <button class="form__order button" type="submit">Отправить заявку</button>
+          <p class="form__important">* — Обязательные поля</p>
         </form>
       </div>
     </main>
     <footer class="footer">
       <section class="cooperation">
         <div class="cooperation__wrapper">
-          <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="cooperation__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <div class="map">
@@ -117,26 +121,26 @@
         </div>
       </section>
       <div class="footer__wrapper">
-        <a class="logo logo--bottom" href="index.html">
-          <img class="logo__text" src="https://via.placeholder.com/101x18" width="101" height="18" alt="Логотип Кэт энерджи">
+        <a class="logo logo--bottom">
+          <img class="logo__text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
         </a>
         <div class="footer__social social">
           <ul class="social__list">
-            <li class="social__item">
+            <li class="social__item social__item--left">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
             </li>
-            <li class="social__item">
+            <li class="social__item social__item--right">
                 <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
             </li>
           </ul>
         </div>
         <div class="footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="HTML Academy">
+            <img class="copyright__image" src="img/htmlacademy.svg" width="41" height="64" alt="HTML Academy">
           </a>
         </div>
       </div>

@@ -1,0 +1,36 @@
+.additional {
+  padding: @padding-mob;
+  margin: 0 0 57px 0;
+}
+
+.additional__title {
+  .title(@font-size:24px, @font-weight: 400, @line-height:24px, @margin:0 0 46px 0,   @padding: 51px 0 0 0);
+  position: relative;
+
+  &::before {
+    .line(@top: 64px)
+  }
+}
+
+.additional__list {
+  .list-reset();
+}
+
+.additional__name {
+  .text-other(@margin: 0 0 12px 0, @color: #222222, @padding: 0);
+}
+
+.additional__view {
+  .text(@line-height: 14px, @margin: 0 0 2px 0);
+  display: flex;
+  justify-content: space-between;
+  font-family: @second-font;
+}
+
+.additional__value {
+  margin: 0 0 13px 0;
+}
+
+.additional__order {
+  margin: 0 0 30px 0;
+}

@@ -1,0 +1,18 @@
+.button {
+  .text-other(@line-height: 20px, @color: white, @padding: 10px 10px);
+  display: flex;
+  width: 280px;
+  height: 40px;
+  background-color: @fancy-color;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &--all {
+    background-color: #f2f2f2;
+    color: @light-color;
+  }
+  &--select {
+    font-size: 14px;
+  }
+}

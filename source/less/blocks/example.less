@@ -1,0 +1,84 @@
+.example {
+  background-color: @background;
+  padding: 0 0 35px 0;
+  margin: 0 0 29px 0;
+}
+
+.example__wrapper {
+  padding: @padding-mob;
+}
+
+.example__title {
+  .title( @line-height:60px, @margin:0 0 23px 0, @padding: 18px 0 0 0);
+}
+
+.example__text {
+  .text(@margin: 0 0 25px 0, @padding: 0 1px 0 0);
+  font-family: @second-font;
+}
+
+.example__inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 19px 0;
+}
+
+.example__result {
+  display: flex;
+  flex-direction: column;
+}
+
+.example__figures {
+  .text-other(@font-size: 24px, @line-height: 24px, @margin: 0, @padding: 12px 0 0 0);
+  width: 124px;
+  height: 56px;
+  border: @line;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.example__value {
+  .text-small(@line-height: 12px, @margin: -8px 0 0 18px, @padding: 0 2px 0 2px);
+  width: 87px;
+  text-align: center;
+  background-color: @background;
+}
+
+.example__expenses {
+  .text-other(@font-size: 14px, @line-height: 20px, @margin:  0 0 34px 0);
+  display: flex;
+  justify-content: center;
+}
+
+.example__image {
+  display: block;
+  margin: 0 0 33px -18px;
+}
+
+.example__before-after {
+  display: flex;
+  justify-content: center;
+}
+
+.example__difference {
+  .text-other( @line-height: 20px, @margin:0 15px 0 20px);
+  display: flex;
+}
+
+.example__scale {
+  display: flex;
+  width: 84px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+}
+
+.example__inner-scale {
+  width: 35px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: @fancy-color;
+  align-self: center;
+  margin: 0 0 0 5px;
+}
