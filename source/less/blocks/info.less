@@ -1,10 +1,10 @@
 .info-wrapper {
-  padding: @padding-mob;
+  padding: @padding-mobile;
   margin: 0 0 45px 0;
 }
 
 .info__title {
-  .title(@font-weight: 400, @line-height:60px, @margin:0 0 30px 0,   @padding: 11px 0 0 0);
+  .title(@font-weight: 400, @line-height:60px, @margin:0 0 30px 0,   @padding: 18px 0 0 0);
 }
 
 .info__list {
@@ -45,4 +45,117 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .info-wrapper {
+    padding: 0;
+  }
 
+  .info__title {
+    .title(@font-size:60px, @line-height:60px, @margin:0 0 25px 30px, @padding: 15px 0 0 0)
+    }
+
+  .info__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .info__item {
+    .text-small(@font-size: 16px, @line-height: 24px, @margin: 0, @padding: 160px 108px 0 30px);
+    width: 384px;
+    min-height: 317px;
+
+    &::after {
+      position: absolute;
+      background-position: 0 0;
+      font-size: 281px;
+      font-family: @main-font;
+      color: #f2f2f2;
+      top: 136px;
+      z-index: -1;
+    }
+
+    &--food::after {
+      content: "1";
+      left: 147px;
+    }
+
+    &--powder::after {
+      content: "2";
+      left: 142px;
+    }
+
+    &--eating::after {
+      content: "3";
+      left: 144px;
+    }
+
+    &--month::after {
+      content: "4";
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 47px;
+      left: 31px;
+    }
+
+    &--food::before {
+      background-position: 15px 15px;
+    }
+
+    &--powder::before {
+      background-position: 15px 14px;
+    }
+
+    &--eating::before {
+      background-position: 14px 15px;
+    }
+
+    &--month::before {
+      background-position: 15px 15px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-wrapper {
+    padding: @padding-desktop;
+  }
+
+  .info__list {
+    justify-content: space-between;
+  }
+
+  .info__item {
+    width: 245px;
+    min-height: 250px;
+    padding: 160px 0 0 0;
+
+    &::before {
+      left: 0;
+    }
+
+    &--food::after {
+      left: 119px;
+    }
+
+    &--powder::after {
+      left: 113px;
+    }
+
+    &--eating::after {
+      left: 115px;
+    }
+
+    &--month::after {
+      left: 115px;
+    }
+  }
+
+  .info__title {
+    margin: 0 0 25px 0;
+    padding: 43px 0 0 0;
+  }
+}

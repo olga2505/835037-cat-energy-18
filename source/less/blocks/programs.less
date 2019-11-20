@@ -1,10 +1,10 @@
 .programs__wrapper {
-  padding: @padding-mob;
+  padding: @padding-mobile;
 }
 
 .programs__list {
   display: flex;
-  .list-reset(@margin:0 0 6px 0);
+  .list-reset();
   flex-direction: column;
 }
 
@@ -70,6 +70,115 @@
   width: 24px;
   height: 11px;
   top: 3px;
-  right: 119px;
+  left: 96px;
   background-image: url("../img/icon-right-arrow-long.svg");
 }
+
+@media (min-width: @tablet-width) {
+  .programs__wrapper {
+    padding: @padding-tablet;
+  }
+
+  .programs__item {
+    padding: 75px 0 0 54px;
+    margin: 0 0 30px 0;
+
+    &::before {
+      .element();
+      width: 200px;
+      height: 200px;
+      top: 90px;
+      left: 447px;
+    }
+
+    &--lose-weight {
+      padding-right: 271px;
+
+      &::after {
+        .element();
+        width: 140px;
+        height: 194px;
+        top: 78px;
+        left: 477px;
+      }
+    }
+
+    &--mass-gain {
+      padding-right: 310px;
+
+      &::after {
+        width: 268px;
+        height: 112px;
+        top: 134px;
+        left: 413px;
+      }
+    }
+  }
+
+  .programs__title {
+    .title(@margin:0 0 25px 0, @line-height: 37px, @text-transform: uppercase, @padding:0)
+  }
+
+  .programs__text {
+    .text-small(@font-size: 16px,  @line-height: 24px, @margin: 0 0 58px 0, @padding: 0);
+    border: none;
+  }
+
+  .programs__link {
+    .text-other(@font-size: 20px, @line-height: 20px, @margin: 0, @padding: 0 0 61px 0);
+    &::before {
+      .element();
+      top: 5px;
+      left: 128px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__wrapper {
+    padding: @padding-desktop;
+  }
+
+  .programs__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    padding: 76px 35px 0 54px;
+    width: 570px;
+
+    &::before {
+      .element();
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &--lose-weight::after {
+      .element();
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 66px;
+    }
+
+    &--mass-gain::after {
+      width: 134px;
+      height: 56px;
+      top: 69px;
+      left: 34px;
+    }
+  }
+
+  .programs__title  {
+    .title(@margin:0 0 75px 0,  @text-transform: uppercase, @padding: 1px 0 0 160px);
+  }
+
+  .programs__text {
+    .text-small(@font-size: 16px,  @line-height: 24px, @margin: 0 0 30px 0, @padding: 0);
+    border: none;
+  }
+}
+

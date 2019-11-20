@@ -13,3 +13,57 @@
   font-family: @second-font;
   width: 273px;
 }
+
+.cooperation__street{
+  margin: 0;
+}
+
+.cooperation__city {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__wrapper {
+    padding: 37px 70px 0 70px;
+    justify-content: space-between;
+    margin: 0 0 60px 0;
+  }
+
+  .cooperation__text {
+    width: 170px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .cooperation__address {
+    width: 170px;
+    text-align: end;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .cooperation__street{
+    margin: 0 0 16px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation {
+    position: relative;
+  }
+
+  .cooperation__wrapper {
+    padding: 66px 74px 20px 76px;
+    justify-content: space-between;
+    width: 570px;
+    min-height: 200px;
+    position: absolute;
+    top: 97px;
+    left: 110px;
+    background-color: #ffffff;
+  }
+
+  .cooperation__address {
+    text-align: left;
+  }
+}
