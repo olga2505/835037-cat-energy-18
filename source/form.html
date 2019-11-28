@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -18,15 +19,15 @@
           <img src="img/icon-mobile-menu.svg" width="24" height="18" alt="Меню">
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list site-list ">
             <li class="site-list__item site-list__item--active">
-              <a class="site-list__link" href="index.html">Главная</a>
+              <a class="site-list__link site-list__link--form" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link"  href="catalog.html">Каталог продукции</a>
+              <a class="site-list__link site-list__link--form"  href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link">Подбор программы</a>
+              <a class="site-list__link site-list__link--form">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -71,12 +72,12 @@
           </fieldset>
           <fieldset class="form__contakts">
             <legend class="form__caption form__caption--contact">Контактные данные (владельца кота)</legend>
-            <ul class="form__list">
-              <li class="form__item">
+            <ul class="form__list form__list--contact">
+              <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
                 <input class="form__input form__input--email form__input--contact" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
                 <input class="form__input form__input--tel form__input--contact" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
               </li>
@@ -88,27 +89,29 @@
           </div>
           <fieldset class="form__addition">
             <legend class="form__caption form__caption--check">Дополнительно</legend>
-            <ul class="form__list">
-              <li class="form__item">
+            <ul class="form__list form__list--check">
+              <li class="form__item form__item--check">
                 <input class="form__check visually-hidden" type="checkbox" name="caption" id="sweetener" checked>
                 <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--check">
                 <input class="form__check visually-hidden" type="checkbox" name="caption" id="water">
                 <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--check">
                 <input class="form__check visually-hidden" type="checkbox" name="caption" id="milk">
                 <label class="form__label form__label--checkbox" for="milk">Молоко</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--check">
                 <input class="form__check visually-hidden" type="checkbox" name="caption" id="vitamins">
                 <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button class="form__order button" type="submit">Отправить заявку</button>
-          <p class="form__important">* — Обязательные поля</p>
+          <div class="form__inner">
+            <button class="form__order button" type="submit">Отправить заявку</button>
+            <p class="form__important">* — Обязательные поля</p>
+          </div>
         </form>
       </div>
     </main>
@@ -121,32 +124,34 @@
             <p class="cooperation__city">Санкт-Петербург</p>
           </div>
         </div>
-        <div class="map">
+        <div>
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573482547300!5m2!1sru!2sru" width="320" height="364"  style="border:0;" allowfullscreen=""></iframe>
         </div>
       </section>
-      <div class="footer__wrapper">
-        <a class="logo logo--bottom">
-          <img class="logo__text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
-        </a>
-        <div class="footer__social social">
-          <ul class="social__list">
-            <li class="social__item social__item--left">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
-            </li>
-            <li class="social__item social__item--right">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__copyright copyright">
-          <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="img/htmlacademy.svg" width="41" height="64" alt="HTML Academy">
+      <div class="footer__box">
+        <div class="footer__wrapper">
+          <a class="logo logo--bottom">
+            <img class="logo__text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
           </a>
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li class="social__item social__item--left">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+              </li>
+              <li class="social__item social__item--right">
+                  <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__copyright copyright">
+            <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__image" src="img/htmlacademy.svg" width="41" height="64" alt="HTML Academy">
+            </a>
+          </div>
         </div>
       </div>
     </footer>

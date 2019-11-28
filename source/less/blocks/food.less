@@ -1,4 +1,9 @@
 .food__wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.food__inner {
   text-align: center;
   color: white;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -6,13 +11,10 @@
   padding: 27px 0 0 0;
   display: flex;
   flex-direction: column;
-  margin: 0 0 22px 0;
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
-.food__inner {
+.food__box {
   display: flex;
   flex-direction: column;
 }
@@ -42,59 +44,82 @@ display: none;
 
 @media (min-width: @tablet-width) {
   .food__wrapper {
-    background-image: none;
+    width: @tablet-width;
     padding: @padding-tablet;
   }
 
   .food__inner {
-    padding: 47px 0 0 0;
+    background-image: none;
+    padding: 48px 0 0 0;
   }
+
   .food__image--mobile {
     display: none;
   }
 
   .food__image--tablet {
     display: block;
-    padding: 2px 0 0 0;
+    padding: 1px 0 0 0;
     margin: 0 0 -20px 0;
   }
 
   .food__title {
-    .title-desctop(@margin:0 auto 42px 0);
+    .title(@font-size:60px, @line-height:60px, @margin:0 auto 42px 0);
     text-align: left;
     width: 565px;
-    padding: 0 0 0 89px;
+    padding: 0 0 0 87px;
   }
 
   .food__slogan {
-    .title-desctop(@font-size:20px, @line-height:20px, @text-transform: uppercase, @margin:0 0 18px 0);
+    .title(@font-size:20px, @line-height:20px, @margin:0 0 18px 0, @color: @font-color, @text-transform: uppercase);
     text-align: left;
-    padding: 0 0 0 89px;
+    padding: 0 0 0 88px;
   }
 
   .food__button {
     position: absolute;
     width: 245px;
     height: 52px;
+    top: 277px;
+    left: 89px;
   }
 }
 
 @media (min-width: @desktop-width) {
+   .food {
+    .wrapper(@width: 100%; @padding: 113px 0 0 0);
+    // width: 50vw;
+    min-height: 696px;
+    position: relative;
+    margin-top: -122px;
+    height: 100%;
+    background-image: url(../img/index-background-desktop@1x.jpg);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 50vw auto;
+    z-index: -1;
+  }
+
   .food__wrapper {
-    flex-direction: row;
-    margin: 0 0 139px 0;
+    width: @desktop-width;
     padding: @padding-desktop;
   }
 
   .food__inner {
-    padding: 0 0 56px 0;
-    align-self: flex-start;
+    flex-direction: row;
+    margin: 0 0 80px 0;
+    padding: 0 0 55px 0;
+  }
+
+  .food__box  {
+    width: 500px;
+    margin: 0 58px 0 0;
   }
 
   .food__image--desktop {
     display: block;
-    margin: 0 0 auto -116px;
-    padding: 18px 0 0 0;
+    margin: 0 0 auto -108px;
+    padding: 29px 0 0 0;
   }
 
   .food__image--tablet {
@@ -103,13 +128,18 @@ display: none;
 
   .food__title {
     text-align: left;
-    padding: 100px 0 0 80px;
-    margin: auto 0 42px 0;
+    padding: 109px 0 0 80px;
+    margin: 0 0 42px 0;
   }
 
   .food__slogan {
     text-align: left;
     padding: 0 0 0 80px;
     margin: 0 auto 0 0;
+  }
+
+  .food__button {
+    top: 343px;
+    left: 80px;
   }
 }

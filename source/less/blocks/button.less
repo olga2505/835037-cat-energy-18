@@ -1,5 +1,5 @@
 .button {
-  .text-other(@line-height: 20px, @color: white, @padding: 10px 10px);
+  .text(@font-size: 16px, @color: @font-color, @text-transform: uppercase, @margin: 0);
   display: flex;
   width: 280px;
   height: 40px;
@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: white;
 
   &--all {
     background-color: #f2f2f2;
@@ -20,19 +21,13 @@
 @media (min-width: @tablet-width) {
   .button {
     font-size: 20px;
-    top: 277px;
-    left: 120px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .button {
     width: 245px;
-    height: 52px;
     font-size: 20px;
-    position: absolute;
-    top: 334px;
-    left: 190px;
   }
 }
 
