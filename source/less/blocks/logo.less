@@ -2,6 +2,35 @@
   display: flex;
   justify-content: center;
   margin: 0 0 23px 0;
-  padding: 35px 0 31px 0;
-  border-bottom: @line
+  padding: 36px 0 31px 0;
+  border-bottom: @line;
+}
+
+.logo__image--tablet,
+.logo__image--desktop {
+  display: none;
+}
+
+@media (min-width:@tablet-width) {
+  .logo__image--mobile {
+    display: none;
+  }
+  .logo__image--tablet {
+    display: block;
+  }
+
+  .logo--bottom {
+    border: none;
+    padding: 9px 0 0 0;
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .logo__image--mobile,
+  .logo__image--tablet {
+    display: none;
+  }
+  .logo__image--desktop {
+    display: block;
+  }
 }

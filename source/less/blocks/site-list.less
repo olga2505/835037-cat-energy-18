@@ -1,8 +1,40 @@
 .site-list__link {
-  color: inherit;
+  color: white;
   font-weight: 500;
 }
 
 .site-list__item {
   margin: 10px 0 13px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    padding: 0 0 0 35px;
+  }
+
+  .site-list__link {
+    font-size: 18px;
+    font-weight: normal;
+    color: #222222;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    padding: 0 0 0 35px;
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+
+    &--catalog {
+      color: @font-color;
+    }
+
+    &--form {
+      color: @font-color;
+    }
+  }
 }

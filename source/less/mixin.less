@@ -30,42 +30,26 @@
   padding:@padding;
 }
 
-.text-other(@font-size: 16px, @font-weight: 400, @line-height: 18px, @margin: 0 0 20px 0, @color: @font-color, @text-transform: uppercase, @padding: 0) {
-  font-size: @font-size;
-  font-weight: @font-weight;
-  line-height: @line-height;
-  margin: @margin;
-  color: @color;
-  text-transform: @text-transform;
-  padding:@padding;
-}
-
-.text-small(@font-size: 12px, @font-weight: 400, @line-height: 16px, @margin: 0 0 10px 0, @color: @light-color, @text-transform: none, @padding: 0, @font-family: @second-font) {
-  font-size: @font-size;
-  font-weight: @font-weight;
-  line-height: @line-height;
-  margin: @margin;
-  color: @color;
-  text-transform: @text-transform;
-  padding:@padding;
-  font-family: @font-family;
-}
-
-.line(@content: "", @position: absolute, @height: 3px, @width: 53px, @top: 14px, @left: -20px, @background-color: @fancy-color, @background-repeat: no-repeat, @background-position: 0 0) {
-  content: @content;
-  position: @position;
+.line(@height: 3px, @width: 53px, @top: 14px, @left: -20px, @background-color: @fancy-color) {
+  content: "";
+  position: absolute;
   width: @width;
   height: @height;
   top: @top;
   right: @left;
   background-color: @background-color;
-  background-repeat: @background-repeat;
-  background-position: @background-position
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.element(@content: "", @position: absolute, @background-repeat: no-repeat, @background-position: 0 0) {
-  content: @content;
-  position: @position;
-  background-repeat: @background-repeat;
+.element(@background-position: 0 0) {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
   background-position: @background-position;
+}
+
+.wrapper(@width: @mobile-width; @padding: @padding-mobile) {
+  width: @width;
+  padding: @padding;
 }
