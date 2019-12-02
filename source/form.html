@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -20,14 +19,14 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list ">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link site-list__link--form" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link site-list__link--form"  href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link site-list__link--form">Подбор программы</a>
+              <a class="site-list__link site-list__link--form site-list__item--active">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -42,15 +41,15 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="name">Имя:*</label>
-                <input class="form__input form__input--information" type="text" name="name" id="name" placeholder="Барсик">
+                <input class="form__input form__input--information" type="text" name="name" id="name" placeholder="Барсик" required>
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>
-                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7" pattern="[0-9]{1-2}" required>
               </li>
               <li class="form__item">
                 <label class="form__label" for="age">Возраст (лет):</label>
-                <input class="form__input form__input--information" type="text" name="age" id="age" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="age" id="age"  pattern="[0-9]{1-2}" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -75,11 +74,11 @@
             <ul class="form__list form__list--contact">
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
-                <input class="form__input form__input--email form__input--contact" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
+                <input class="form__input form__input--email form__input--contact" type="text" name="email" id="email" placeholder="kuklachev@gmail.com"  required>
               </li>
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel form__input--contact" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+                <input class="form__input form__input--tel form__input--contact" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>

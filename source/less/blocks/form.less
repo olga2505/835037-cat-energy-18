@@ -79,8 +79,9 @@
 .form__input {
   .text(@font-size: 16px, @margin: 0 0 14px 0, @color: @font-color, @text-transform: uppercase);
   min-height: 45px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e6e6e6;
   flex-grow: 1;
+  outline: none;
 
   &--comment {
     width: 280px;
@@ -111,6 +112,14 @@
 
   &:-ms-input-placeholder {
     color: @light-color;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #111111;
   }
 }
 
