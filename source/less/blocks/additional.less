@@ -1,11 +1,14 @@
 .additional {
   .wrapper();
   margin: 0 auto 35px auto;
+  position: relative;
 }
 
 .additional__title {
-  .title(@font-size:24px, @font-weight: 400, @line-height:24px, @margin:0 0 34px 0, @padding: 0);
-  position: relative;
+  .title(@font-size:24px, @font-weight: 400, @line-height:24px, @margin:0 0 34px 0, @padding: 0 22px 0 0);
+  background-color: white;
+  display: inline-block;
+
 
   &::before {
     .line(@top: 14px)
@@ -74,25 +77,12 @@
   .additional__title {
     font-size: 36px;
     line-height: 36px;
-    padding: 0 0 0 36px;
+    padding: 0 36px 0 37px;
     margin: 0 0 80px 0;
 
     &::before {
-      width: 327px;
       top: 22px;
-      right: -29px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 28px;
-      height: 3px;
-      top: 22px;
-      left: -31px;
-      background-color: #68b738;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+      transform: translateX(-50%);
     }
   }
 
@@ -145,16 +135,12 @@
   }
 
   .additional__title {
-    padding: 0;
+    padding: 0 36px 0 40px;
+    margin-left: -40px;
 
     &::after {
       width: 70px;
       left: -109px;
-    }
-
-    &::before {
-      width: 957px;
-      right: -111px;
     }
   }
 

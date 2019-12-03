@@ -19,10 +19,10 @@
 @media (min-width: @tablet-width) {
   .site-list__item {
     margin: 0 0 0 35px;
+    padding: 23px 0 11px 0;
 
     &--active {
       border-bottom: 2px solid #68b738;
-      padding: 11px 0 9px 0;
     }
   }
 
@@ -34,7 +34,6 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .site-list--green  .site-list__item--active {
     border-bottom: 2px solid white;
   }
@@ -42,7 +41,6 @@
   .site-list__link {
     font-size: 20px;
     font-weight: normal;
-    color: white;
 
     &--catalog {
       color: @font-color;
@@ -50,6 +48,10 @@
 
     &--form {
       color: @font-color;
+    }
+
+    &--white {
+      color: white;
     }
   }
 }
