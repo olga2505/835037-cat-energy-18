@@ -40,16 +40,16 @@
           <fieldset class="form__information">
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__label" for="name">Имя:*</label>
-                <input class="form__input form__input--information" type="text" name="name" id="name" placeholder="Барсик" required>
+                <label class="form__label" for="cat-name">Имя:*</label>
+                <input class="form__input form__input--information" type="text" name="name" id="cat-name" placeholder="Барсик" patter="^[А-Яа-яЁё\s]+$">
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>
-                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7" pattern="[0-9]{1-2}" required>
+                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7" pattern="[0-9]{1,2}">
               </li>
               <li class="form__item">
                 <label class="form__label" for="age">Возраст (лет):</label>
-                <input class="form__input form__input--information" type="text" name="age" id="age"  pattern="[0-9]{1-2}" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="age" id="age"  pattern="[0-9]{1,2}" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -75,11 +75,11 @@
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
                 <input class="form__input form__input--email form__input--contact" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
-                pattern="^(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})$" required>
+                pattern="^(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})$">
               </li>
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel form__input--contact" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" pattern="^(8|\+7)\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$" required>
+                <input class="form__input form__input--tel form__input--contact" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" pattern="^(8|\+7)\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
               </li>
             </ul>
           </fieldset>
