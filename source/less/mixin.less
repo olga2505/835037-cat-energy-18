@@ -30,16 +30,28 @@
   padding:@padding;
 }
 
-.line(@height: 3px, @width: 53px, @top: 14px, @left: -20px, @background-color: @fancy-color) {
+.line(@height: 3px, @width: 100vw, @top: 14px, @right: auto, @left: 50%, @background-color: @fancy-color) {
   content: "";
   position: absolute;
   width: @width;
   height: @height;
   top: @top;
-  right: @left;
+  right: @right;
+  left: @left;
   background-color: @background-color;
   background-repeat: no-repeat;
   background-position: 0 0;
+  z-index: -1;
+}
+
+.line-grey(@transform: translateX(-30%)) {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  background-color: #ededed;
+  top: -1px;
+  transform: @transform;
 }
 
 .element(@background-position: 0 0) {

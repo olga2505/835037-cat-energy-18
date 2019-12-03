@@ -1,7 +1,7 @@
-  .form {
-    .wrapper();
-    margin: 0 auto;
-  }
+.form {
+  .wrapper();
+  margin: 0 auto;
+}
 
 .form__title {
   .title( @line-height:60px, @padding: 15px 0 0 0);
@@ -46,6 +46,15 @@
       border: 1px solid #cdcdcd;
       cursor: pointer;
     }
+
+    &:hover::before {
+      border-color: #bababa;
+    }
+
+    &:active::before,
+    &:active::after {
+      opacity: 0.3;
+    }
   }
   &--contact::before {
     .element();
@@ -79,8 +88,9 @@
 .form__input {
   .text(@font-size: 16px, @margin: 0 0 14px 0, @color: @font-color, @text-transform: uppercase);
   min-height: 45px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e6e6e6;
   flex-grow: 1;
+  outline: none;
 
   &--comment {
     width: 280px;
@@ -112,6 +122,21 @@
   &:-ms-input-placeholder {
     color: @light-color;
   }
+
+  &:hover {
+    border: #cdcdcd;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid rgba(68, 68, 68, 1);
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 1);
+  }
+
+  &:invalid {
+    border: 1px solid rgb(255, 130, 130);
+    box-shadow: 0 0 0 1px rgb(255, 130, 130);
+  }
 }
 
 .form__target {
@@ -132,9 +157,18 @@
     top: -7px;
     left: -1px;
     background-color: transparent;
-    border: 1px solid #cecece;
+    border: 1px solid #cdcdcd;
     border-radius: 50% 50%;
     cursor: pointer;
+  }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -150,42 +184,47 @@
 
 .form__contakts{
   .fieldset-reset( @margin:0 0 14px 0);
+  position: relative;
 }
 
 .form__caption {
-  .title(@font-size:24px, @line-height:24px, @margin:0 0 34px 0);
-  position: relative;
+  .title(@font-size:24px, @line-height:24px, @margin:0 0 34px 0, @padding: 0 20px 0 0);
+  background-color: white;
+  display: inline-block;
 
   &--check {
     margin: 0 0 41px 0;
   }
 
   &--contact {
+    width: 201px;
     &::before {
-      .line(@width: 99px, @left: -20px);
+      .line();
     }
   }
 
   &--comment {
     &::before {
-      .line(@width: 158px, @left: -179px);
+      .line();
     }
   }
 
   &--check {
     &::before {
-      .line(@width: 136px, @left: -159px);
+      .line();
     }
   }
 }
 
 .form__comment {
   margin: 0 0 9px 0;
+  position: relative;
 }
 
 .form__addition {
   .fieldset-reset();
   margin: 0 0 17px 0;
+  position: relative;
 }
 
 .form__order {
@@ -273,21 +312,13 @@
   .form__caption {
     font-size: 36px;
     line-height: 36px;
-    margin: 0 0 76px 0;
+    margin: 0 0 76px -40px;
+    width: auto;
+    padding: 0px 40px;
 
     &--contact::before {
-      width: 145px;
       top: 22px;
-      right: -186px;
-    }
-
-    &--contact::after {
-      .element();
-      width: 29px;
-      height: 3px;
-      top: 22px;
-      left: -69px;
-      background-color: #68b738;
+      transform: translateX(-50%);
     }
   }
 
@@ -350,37 +381,19 @@
 
     &--comment {
       &::before {
-        width: 479px;
         top: 22px;
-        right: -517px;
-      }
-
-      &::after {
-        .element();
-        width: 29px;
-        height: 3px;
-        top: 22px;
-        left: -69px;
-        background-color: #68b738;
+        transform: translateX(-50%);
       }
     }
 
     &--check {
       margin: 0 0 66px 0;
+      margin: 0 0 67px -40px;
+      padding: 0px 40px;
 
       &::before {
-        width: 446px;
         top: 22px;
-        right: -487px;
-      }
-
-      &::after {
-        .element();
-        width: 29px;
-        height: 3px;
-        top: 22px;
-        left: -69px;
-        background-color: #68b738;
+        transform: translateX(-50%);
       }
     }
   }
@@ -421,6 +434,7 @@
 
   .form__addition {
     margin: 0 0 13px 0;
+    position: relative;
   }
 }
 
@@ -459,47 +473,17 @@
   }
 
   .form__caption {
-    margin: 0 0 75px 0;
+    margin: 0 0 75px -40px;
 
     &--contact {
 
-      &::after {
-        width: 70px;
-        top: 21px;
-        left: -110px;
-      }
-
       &::before {
-        width: 776px;
         top: 21px;
-        right: -817px;
       }
     }
 
-    &--comment {
-
-      &::after {
-        width: 70px;
-        left: -110px;
-      }
-
-      &::before {
-        width: 1110px;
-        right: -1148px;
-      }
-    }
     &--check {
-      margin: 0 0 67px 0;
-
-      &::after {
-        width: 70px;
-        left: -110px;
-      }
-
-      &::before {
-        width: 1078px;
-        right: -1119px;
-      }
+      margin: 0 0 67px -40px;
     }
   }
 
@@ -568,4 +552,3 @@
     margin: 0 0 83px 0;
   }
 }
-

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -14,20 +13,20 @@
         <img class="logo__image logo__image--tablet" src="img/logo-tablet.svg" width="173" height="58" alt="Логотип Кэт энерджи">
         <img class="logo__image logo__image--desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Кэт энерджи">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
-          <img src="img/icon-mobile-menu.svg" width="24" height="18" alt="Меню">
+            <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list ">
+          <ul class="main-nav__list site-list site-list--green">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
             <li class="site-list__item site-list__item--active">
-              <a class="site-list__link site-list__link--form" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--form"  href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--form">Подбор программы</a>
+              <a class="site-list__link">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -41,16 +40,16 @@
           <fieldset class="form__information">
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__label" for="name">Имя:*</label>
-                <input class="form__input form__input--information" type="text" name="name" id="name" placeholder="Барсик">
+                <label class="form__label" for="cat-name">Имя:*</label>
+                <input class="form__input form__input--information" type="text" name="name" id="cat-name" placeholder="Барсик" patter="^[А-Яа-яЁё\s]+$">
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>
-                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="weight" id="weight" placeholder="7" pattern="[0-9]{1,2}">
               </li>
               <li class="form__item">
                 <label class="form__label" for="age">Возраст (лет):</label>
-                <input class="form__input form__input--information" type="text" name="age" id="age" placeholder="7">
+                <input class="form__input form__input--information" type="text" name="age" id="age"  pattern="[0-9]{1,2}" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -75,17 +74,18 @@
             <ul class="form__list form__list--contact">
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
-                <input class="form__input form__input--email form__input--contact" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
+                <input class="form__input form__input--email form__input--contact" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
+                pattern="^(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})$">
               </li>
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel form__input--contact" type="text" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+                <input class="form__input form__input--tel form__input--contact" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" pattern="^(8|\+7)\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
               </li>
             </ul>
           </fieldset>
           <div class="form__comment">
-            <legend class="form__caption form__caption--comment">Комментарий</legend>
-            <textarea class="form__input form__input--comment" type="text" placeholder="Расскажите обо всех повадках кота" ></textarea>
+            <p class="form__caption form__caption--comment">Комментарий</p>
+            <textarea class="form__input form__input--comment" name="comment" placeholder="Расскажите обо всех повадках кота" ></textarea>
           </div>
           <fieldset class="form__addition">
             <legend class="form__caption form__caption--check">Дополнительно</legend>
@@ -117,6 +117,7 @@
     </main>
     <footer class="footer">
       <section class="cooperation">
+        <h2 class="visually-hidden">Адрес</h2>
         <div class="cooperation__wrapper">
           <p class="cooperation__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="cooperation__address">
@@ -155,5 +156,6 @@
         </div>
       </div>
     </footer>
+    <script src="../js/menu.js"></script>
   </body>
 </html>

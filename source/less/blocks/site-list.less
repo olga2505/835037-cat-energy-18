@@ -1,15 +1,29 @@
 .site-list__link {
-  color: white;
-  font-weight: 500;
+  color: @font-color;
 }
 
 .site-list__item {
-  margin: 10px 0 13px 0;
+  padding: 23px 0 23px 0;
+}
+
+.site-list__link[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .site-list__item {
-    padding: 0 0 0 35px;
+    margin: 0 0 0 35px;
+    padding: 23px 0 11px 0;
+
+    &--active {
+      border-bottom: 2px solid #68b738;
+    }
   }
 
   .site-list__link {
@@ -20,14 +34,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-list__item {
-    padding: 0 0 0 35px;
+  .site-list--green  .site-list__item--active {
+    border-bottom: 2px solid white;
   }
 
   .site-list__link {
     font-size: 20px;
     font-weight: normal;
-    color: white;
 
     &--catalog {
       color: @font-color;
@@ -35,6 +48,10 @@
 
     &--form {
       color: @font-color;
+    }
+
+    &--white {
+      color: white;
     }
   }
 }

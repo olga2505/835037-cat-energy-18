@@ -17,6 +17,25 @@
 .food__box {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.food__image {
+  position: relative;
+  min-height: 320px;
+  margin: 0;
+  padding: 274px 0 0 0;
+
+  &::before {
+    .element();
+    width: 280px;
+    height: 270px;
+    top: 0;
+    left: 20px;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .food__title {
@@ -24,22 +43,11 @@
 }
 
 .food__slogan {
-  .text(@line-height: 14px, @margin: 0, @color: white, @text-transform: uppercase, @padding: 0);
+  .text(@line-height: 14px, @margin: 0 0 28px 0, @color: white, @text-transform: uppercase, @padding: 0 0 0 0);
 }
 
 .food__button {
   margin: 0 auto;
-}
-
-.food__image {
-  padding: 28px 0 0 0;
-  margin: 0 auto 2px auto;
-  display: block;
-}
-
-.food__image--tablet,
-.food__image--desktop {
-display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -50,17 +58,19 @@ display: none;
 
   .food__inner {
     background-image: none;
-    padding: 48px 0 0 0;
+    padding: 42px 0 0 0;
   }
 
-  .food__image--mobile {
-    display: none;
-  }
+  .food__image {
+    padding: 0;
 
-  .food__image--tablet {
-    display: block;
-    padding: 1px 0 0 0;
-    margin: 0 0 -20px 0;
+    &::before {
+      width: 709px;
+      height: 609px;
+      top: -28px;
+      left: -2px;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+    }
   }
 
   .food__title {
@@ -71,33 +81,29 @@ display: none;
   }
 
   .food__slogan {
-    .title(@font-size:20px, @line-height:20px, @margin:0 0 18px 0, @color: @font-color, @text-transform: uppercase);
+    .title(@font-size:20px, @line-height:20px, @margin:0 0 47px 0, @color: @font-color, @text-transform: uppercase, @padding: 0 0 0 88px);
     text-align: left;
-    padding: 0 0 0 88px;
   }
 
   .food__button {
-    position: absolute;
     width: 245px;
     height: 52px;
-    top: 277px;
-    left: 89px;
+    margin: 0px 0 509px 88px;
+    position: relative;
+    z-index: 10;
   }
 }
 
 @media (min-width: @desktop-width) {
    .food {
-    .wrapper(@width: 100%; @padding: 113px 0 0 0);
-    // width: 50vw;
+    .wrapper(@width: 100%; @padding: 122px 0 0 0);
     min-height: 696px;
     position: relative;
     margin-top: -122px;
-    height: 100%;
     background-image: url(../img/index-background-desktop@1x.jpg);
-    background-position: 100% 50%;
+    background-position: 100% 0;
     background-repeat: no-repeat;
     background-size: 50vw auto;
-    z-index: -1;
   }
 
   .food__wrapper {
@@ -108,27 +114,31 @@ display: none;
   .food__inner {
     flex-direction: row;
     margin: 0 0 80px 0;
-    padding: 0 0 55px 0;
+    padding: 0;
+    flex-direction: column;
   }
 
   .food__box  {
     width: 500px;
-    margin: 0 58px 0 0;
+    margin: 0 58px 52px 0;
   }
 
-  .food__image--desktop {
-    display: block;
-    margin: 0 0 auto -108px;
-    padding: 29px 0 0 0;
-  }
+  .food__image {
+    padding: 0;
+    min-height: auto;
 
-  .food__image--tablet {
-    display: none;
+    &::before {
+      width: 552px;
+      height: 499px;
+      top: -314px;
+      left: 451px;
+      background-image: url("../img/index-can-desktop@1x.png");
+    }
   }
 
   .food__title {
     text-align: left;
-    padding: 109px 0 0 80px;
+    padding: 100px 0 0 80px;
     margin: 0 0 42px 0;
   }
 
@@ -139,7 +149,6 @@ display: none;
   }
 
   .food__button {
-    top: 343px;
-    left: 80px;
+    margin: 0 0 0 80px;
   }
 }

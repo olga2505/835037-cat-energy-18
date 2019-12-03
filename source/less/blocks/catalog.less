@@ -6,6 +6,10 @@
 .catalog__title {
   .title(@line-height:60px, @margin:0 0 28px 0, @padding: 15px 0 0 0);
   position: relative;
+
+  &::before {
+    .line-grey();
+  }
 }
 
 .catalog__list {
@@ -15,6 +19,11 @@
 .catalog__item {
   padding: 0;
   margin: 0 0 0 0;
+  position: relative;
+
+  &::before {
+    .line-grey();
+  }
 }
 
 .catalog__inner {
@@ -28,6 +37,10 @@
 
 .catalog__product {
   .text(@font-size: 16px, @line-height: 20px, @margin: 0 0 10px 0, @color:@font-color, @text-transform: uppercase, @padding: 23px 60px 0 0);
+}
+
+.catalog__characteristics {
+  border-collapse: collapse;
 }
 
 .catalog__inner-image {
@@ -59,6 +72,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  &::before {
+    .line-grey(@transform: translateX(0));
+  }
+
+  &::after {
+    .line-grey(@transform: translateX(0));
+    top: 209px;
+  }
 }
 
 .catalog__more {
@@ -101,12 +124,20 @@
     &:nth-last-child(2) {
       margin: 0;
     }
+
+    &::before {
+      display: none;
+    }
   }
 
   .catalog__title {
     font-size: 60px;
     padding: 48px 0 0 0;
     margin: 0 0 165px 0;
+
+    &:before {
+      display: none;
+    }
   }
 
   .catalog__list {
@@ -138,23 +169,29 @@
     align-self: center;
     text-align: center;
     padding: 20px 0 0 4px;
-    margin: 0 0 24px 0;
+    margin: 0 0 22px 0;
     font-size: 20px;
     width: 155px;
   }
 
   .catalog__characteristics {
     padding: 0 34px 0 37px;
+    width: 250px;
+    margin: 0 auto;
   }
 
   .catalog__value {
     font-size: 16px;
-    padding: 0 0 14px 0;
+    padding: 5px 0 4px 0;
+  }
+
+  .catalog__line {
+    border-bottom: 1px solid #cdcdcd;
   }
 
   .catalog__field {
     font-size: 16px;
-    padding: 0 0 14px 0;
+    padding: 7px 0 7px 0;
   }
 
   .catalog__all {
@@ -162,6 +199,11 @@
     min-height: 432px;
     border: 1px solid #e6e6e6;
     padding: 164px 0 0 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .catalog__more {
@@ -196,6 +238,14 @@
 @media (min-width: @desktop-width) {
   .catalog {
     .wrapper(@width: @desktop-width; @padding: @padding-desktop);
+  }
+
+  .catalog__product {
+    margin: 0 0 19px 0;
+  }
+
+  .catalog__characteristics {
+    width: 168px;
   }
 
   .catalog__title {

@@ -1,5 +1,9 @@
 .cooperation {
   background-color: @background;
+
+  &--index {
+    background-color: white;
+  }
 }
 
 .cooperation__wrapper {
@@ -27,8 +31,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .cooperation__wrapper {
-    .wrapper(@width: @tablet-width; @padding: 66px 71px 0 71px);
+    .cooperation__wrapper {
+    .wrapper(@width: @tablet-width; @padding: 63px 71px 0 71px);
     justify-content: space-between;
     margin: 0 auto 60px auto;
   }

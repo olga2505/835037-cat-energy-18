@@ -9,9 +9,25 @@
   cursor: pointer;
   color: white;
 
+  &:hover {
+    background-color: @hover-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--all {
     background-color: #f2f2f2;
     color: @light-color;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
   &--select {
     font-size: 14px;
