@@ -5,6 +5,11 @@
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="../js/picturefill.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -41,7 +46,7 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="cat-name">Имя:*</label>
-                <input class="form__input form__input--information" type="text" name="name" id="cat-name" placeholder="Барсик" patter="^[А-Яа-яЁё\s]+$">
+                <input class="form__input form__input--information" type="text" name="cat-name" id="cat-name" placeholder="Барсик" patter="^[А-Яа-яЁё\s]+$">
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>

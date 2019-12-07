@@ -1,5 +1,5 @@
 .info {
-  margin: 0 0 45px 0;
+  margin: 0 0 46px 0;
 }
 
 .info-wrapper {
@@ -8,7 +8,7 @@
 }
 
 .info__title {
-  .title(@font-weight: 400, @line-height:60px, @margin:0 0 30px 0,   @padding: 18px 0 0 0);
+  .title(@font-weight: 400, @line-height:60px, @margin:0 0 30px 0,   @padding: 17px 0 0 0);
 }
 
 .info__list {
@@ -47,6 +47,35 @@
   &--month::before {
     background-image: url("../img/advantage-clock@1x.png");
     background-position: 5px 5px;
+  }
+}
+
+@media(min-resolution:@retina-dppx) {
+  .info__item {
+
+    &::before {
+      background-size: 50px 50px;
+    }
+
+    &--food::before {
+      background-image: url("../img/advantage-leaf@2x.png");
+      background-position: 5px 5px;
+    }
+
+    &--powder::before {
+      background-image: url("../img/advantage-powder@2x.png");
+      background-position: 5px 4px;
+    }
+
+    &--eating::before {
+      background-image: url("../img/advantage-dining@2x.png");
+      background-position: 4px 5px;
+    }
+
+    &--month::before {
+      background-image: url("../img/advantage-clock@2x.png");
+      background-position: 5px 5px;
+    }
   }
 }
 
@@ -145,10 +174,6 @@
     min-height: 250px;
     padding: 160px 0 0 0;
 
-    &::before {
-      left: 0;
-    }
-
     &--food::after {
       left: 119px;
     }
@@ -168,6 +193,6 @@
 
   .info__title {
     margin: 0 0 25px 0;
-    padding: 45px 0 0 0;
+    padding: 43px 0 0 0;
   }
 }
