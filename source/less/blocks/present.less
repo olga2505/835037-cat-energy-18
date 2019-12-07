@@ -1,8 +1,3 @@
-// .present {
-//   .wrapper();
-//   margin: 0 auto;
-// }
-
 .present__wrapp {
   background-image: url(../img/gift-photo-mobile@1x.jpg);
   background-repeat: no-repeat;
@@ -70,6 +65,11 @@
     align-items: flex-end;
     justify-content: center;
     padding: 0;
+
+    @media (min-resolution:@retina-dppx) {
+      background-image: url(../img/gift-photo-desktop@2x.jpg);
+      background-size: 245px 289px;
+    }
 
     &::before {
       left: 96px;
