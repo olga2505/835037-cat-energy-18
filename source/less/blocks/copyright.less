@@ -3,12 +3,22 @@
   font-family: @second-font;
 
   &--text {
-    padding: 11px 0 0 0;
+    padding: 23px 0 0 0;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
-.copyright__image {
-  max-width: 100%;
-  height: auto;
-  padding: 0;
+.copyright__icon {
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

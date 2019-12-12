@@ -24,8 +24,9 @@
     position: absolute;
     background-image: url("../img/before-mobile@1x.png");
     background-position: 0 0;
-    width: 311px;
-    height: 232px;
+    background-size: 316px 239px;;
+    width: 316px;
+    height: 239px;
     top: 0px;
     left: -20px;
   }
@@ -139,7 +140,8 @@
 @media (min-width: @tablet-width) {
   .example {
     background-color: white;
-    margin: 0 0 36px 0;
+    margin: 0;
+    padding: 0;
   }
 
   .example__wrapper {
@@ -159,18 +161,21 @@
       width: 50%;
       content: "";
       position: absolute;
-      top: -168px
+      top: -168px;
+
     }
 
     &--left::before {
       background-image: url("../img/before-tablet@1x.png");
       background-position: 19px 0;
+      background-size: 354px 620px;;
       left: 0;
     }
 
     &--right::before {
       background-image: url("../img/after-tablet@1x.png");
       background-position: -335px 0;
+      background-size: 354px 607px;;
       left: 354px;
     }
   }

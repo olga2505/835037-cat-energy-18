@@ -30,28 +30,23 @@
     border-radius: 50% 50%;
   }
 
-  &::after {
-    .element();
-  }
-
   &--lose-weight {
     margin: 0 0 20px 0;
+  }
+}
 
-    &::after {
-      width: 38px;
-      height: 49px;
-      top: 22px;
-      left: 30px;
-      background-image: url("../img/icon-cat-slim.svg");
-    }
+.programs__icon {
+  position: absolute;
+
+  &--slim {
+    top: 22px;
+    left: 28px;
   }
 
-  &--mass-gain::after {
-    width: 69px;
-    height: 73px;
-    top: 35px;
+  &--mass {
+    top: 13px;
     left: 12px;
-    background-image: url("../img/icon-cat-pro.svg");
+
   }
 }
 
@@ -111,25 +106,27 @@
 
     &--lose-weight {
       padding-right: 271px;
-
-      &::after {
-        .element();
-        width: 140px;
-        height: 194px;
-        top: 80px;
-        left: 477px;
-      }
     }
 
     &--mass-gain {
       padding-right: 310px;
+    }
+  }
 
-      &::after {
-        width: 268px;
-        height: 112px;
-        top: 134px;
-        left: 413px;
-      }
+  .programs__icon {
+
+    &--slim {
+      width: 140px;
+      height: 194px;
+      top: 80px;
+      left: 475px;
+    }
+
+    &--mass {
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      left: 411px;
     }
   }
 
@@ -183,16 +180,18 @@
       top: 47px;
       left: 52px;
     }
+  }
 
-    &--lose-weight::after {
-      .element();
+  .programs__icon {
+
+    &--slim {
       width: 70px;
       height: 97px;
       top: 41px;
       left: 66px;
     }
 
-    &--mass-gain::after {
+    &--mass {
       width: 134px;
       height: 56px;
       top: 69px;
