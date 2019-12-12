@@ -19,16 +19,20 @@
 }
 
 .example__photo {
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/before-mobile@1x.png");
-    background-position: 0 0;
-    background-size: 316px 239px;;
-    width: 316px;
-    height: 239px;
-    top: 0px;
-    left: -20px;
+
+  &--left {
+    
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/before-mobile@1x.png");
+      background-position: 0 0;
+      background-size: 316px 239px;;
+      width: 316px;
+      height: 239px;
+      top: 0px;
+      left: -20px;
+    }
   }
 }
 
