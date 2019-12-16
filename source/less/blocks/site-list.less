@@ -4,6 +4,11 @@
 
 .site-list__item {
   padding: 23px 0 23px 0;
+  position: relative;
+
+  &::before {
+    .line-grey(@transform: translateX(-50%));
+  }
 }
 
 .site-list__link[href] {
@@ -16,6 +21,7 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .site-list__item {
     margin: 0 0 0 35px;
@@ -23,6 +29,10 @@
 
     &--active {
       border-bottom: 2px solid #68b738;
+    }
+
+    &::before {
+      display: none;
     }
   }
 
