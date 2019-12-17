@@ -9,33 +9,39 @@
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="../js/picturefill.js" async></script>
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody (); // run it now or whenever you are ready</script>
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--mobile" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
-        <img class="logo__image logo__image--tablet" src="img/logo-tablet.svg" width="173" height="58" alt="Логотип Кэт энерджи">
-        <img class="logo__image logo__image--desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Кэт энерджи">
-      </a>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list site-list--green">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link site-list__link--white">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--white"  href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--white" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__inner">
+        <a class="page-header__logo logo" href="index.html">
+          <picture>
+            <source media="(min-width:1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list site-list--green">
+              <li class="site-list__item site-list__item--active">
+                <a class="site-list__link site-list__link--white">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--white"  href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--white" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <div class="food">
@@ -46,6 +52,15 @@
               <strong class="food__slogan">Занялся собой? Займись котом!</strong>
             </div>
             <div class="food__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+                <img class="food__product" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy">
+              </picture>
               <a class="food__button button button--select" href="form.html">Подобрать программу</a>
             </div>
           </div>
@@ -56,14 +71,34 @@
           <h2 class="visually-hidden">Программы</h2>
           <ul class="programs__list">
             <li class="programs__item programs__item--lose-weight">
+              <svg class="programs__icon programs__icon--slim" width="38" height="49">
+                <use xlink:href="img/sprite.svg#icon-cat-slim"></use>
+              </svg>
               <h3 class="programs__title">Похудение</h3>
               <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__link" href="#">Каталог Slim</a>
+              <a class="programs__link" href="#">Каталог Slim
+                <svg class="programs__link-icon programs__link-icon--slim programs__link-icon--long" width="24" height="11">
+                  <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+                </svg>
+                <svg class="programs__link-icon programs__link-icon--verylong programs__link-icon--verylong-slim" width="24" height="11">
+                  <use xlink:href="img/sprite.svg#icon-right-arrow-verylong"></use>
+                </svg>
+              </a>
             </li>
             <li class="programs__item programs__item--mass-gain">
+              <svg class="programs__icon programs__icon--mass" width="69" height="73">
+                <use xlink:href="img/sprite.svg#icon-cat-pro"></use>
+              </svg>
               <h3 class="programs__title">Набор массы</h3>
               <p class="programs__text">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__link" href="#">Каталог Pro</a>
+              <a class="programs__link" href="#">Каталог Pro
+                <svg class="programs__link-icon programs__link-icon--mass programs__link-icon--long" width="24" height="11">
+                  <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+                </svg>
+                <svg class="programs__link-icon programs__link-icon--verylong programs__link-icon--verylong-mass" width="24" height="11">
+                  <use xlink:href="img/sprite.svg#icon-right-arrow-verylong"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -113,8 +148,23 @@
             <div class="example__wrapper">
               <div class="example__holder">
                 <div class="example__photo example__photo--left">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@@2x.webp 2x">
+                    <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                    <img class="example__before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="316" height="239">
+                  </picture>
                 </div>
                 <div class="example__photo example__photo--right">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                    <img class="example__after" src="img/after-mobile@1x.png"
+                    srcset="img/after-mobile@2x.png 2x" width="316" height="239">
+                  </picture>
                 </div>
               </div>
               <div class="example__before-after">
@@ -151,25 +201,39 @@
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item social__item--left">
-                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
+                  <svg class="social__link-icon social__link-icon--vkontakte" width="24" height="15">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
+                  <svg class="social__link-icon social__link-icon--instagram" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item social__item--right">
-                  <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
+                  <svg class="social__link-icon social__link-icon--facebook" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
           <div class="footer__copyright copyright">
             <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="img/htmlacademy.svg" width="41" height="64" alt="HTML Academy">
+              <svg class="copyright__icon" aria-label="HTML Academy" focusable="false" width="41" height="64">
+                <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
-    <script src="../js/menu.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>

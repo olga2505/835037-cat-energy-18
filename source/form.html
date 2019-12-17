@@ -9,33 +9,39 @@
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="../js/picturefill.js" async></script>
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody (); // run it now or whenever you are ready</script>
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--mobile" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
-        <img class="logo__image logo__image--tablet" src="img/logo-tablet.svg" width="173" height="58" alt="Логотип Кэт энерджи">
-        <img class="logo__image logo__image--desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Кэт энерджи">
-      </a>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list site-list--green">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__inner">
+        <a class="page-header__logo logo" href="index.html">
+          <picture>
+            <source media="(min-width:1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list site-list--green">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a class="site-list__link">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main  class="page-main">
       <div class="form">
@@ -46,7 +52,7 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="cat-name">Имя:*</label>
-                <input class="form__input form__input--information" type="text" name="cat-name" id="cat-name" placeholder="Барсик" patter="^[А-Яа-яЁё\s]+$">
+                <input class="form__input form__input--information" type="text" name="cat-name" id="cat-name" placeholder="Барсик" pattern="[A-Za-zА-Яа-яЁё]{1,20}">
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг):*</label>
@@ -81,10 +87,16 @@
                 <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
                 <input class="form__input form__input--email form__input--contact" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
                 pattern="^(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})$">
+                <svg class="form__icon form__icon--email" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
               </li>
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--tel" for="tel">Телефон:*</label>
                 <input class="form__input form__input--tel form__input--contact" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" pattern="^(8|\+7)\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
+                <svg class="form__icon form__icon--tel" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </li>
             </ul>
           </fieldset>
@@ -142,25 +154,41 @@
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item social__item--left">
-                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
+                  <svg class="social__link-icon social__link-icon--vkontakte" width="24" height="15">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
+                  <svg class="social__link-icon social__link-icon--instagram" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item social__item--right">
-                  <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
+                  <svg class="social__link-icon social__link-icon--facebook" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
           <div class="footer__copyright copyright">
             <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="img/htmlacademy.svg" width="41" height="64" alt="HTML Academy">
+              <svg class="copyright__icon" aria-label="HTML Academy" focusable="false" width="41" height="64">
+                <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
-    <script src="../js/menu.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/contact.js"></script>
+
   </body>
 </html>

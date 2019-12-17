@@ -1,4 +1,8 @@
 .page-header {
+  overflow-x: hidden;
+}
+
+.page-header__inner {
   display: flex;
   flex-direction: column;
   padding: 13px 20px 0 20px;
@@ -14,7 +18,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__inner {
     width: @tablet-width;
     padding: @padding-tablet;
     flex-direction: row;
@@ -26,7 +30,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
+  .page-header__inner {
     width: @desktop-width;
     padding: @padding-desktop;
 }

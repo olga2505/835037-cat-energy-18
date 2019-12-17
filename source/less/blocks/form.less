@@ -25,6 +25,7 @@
 
 .form__item {
   display: flex;
+  position: relative;
 }
 
 .form__label {
@@ -56,24 +57,29 @@
       opacity: 0.3;
     }
   }
-  &--contact::before {
-    .element();
-    left: 247px;
-  }
+}
 
-  &--email::before {
-    width: 17px;
-    height: 15px;
+.form__icon {
+  position: absolute;
+  fill: #222222;
+
+  &--email {
     top: 16px;
-    background-image: url(../img/icon-mail.svg);
+    left: 248px;
   }
 
-  &--tel::before {
-    width: 20px;
-    height: 20px;
+  &--tel {
     top: 13px;
-    background-image: url(../img/icon-phone.svg);
+    left: 248px;
   }
+}
+
+.form__input:focus  + .form__icon {
+  fill: #68b738;
+}
+
+.form__input:invalid  + .form__icon {
+  fill: #ff8282;
 }
 
 .form__check:checked + .form__label--checkbox::after {
@@ -124,7 +130,7 @@
   }
 
   &:hover {
-    border: #cdcdcd;
+    border-color: #cdcdcd;
   }
 
   &:active,
@@ -185,12 +191,14 @@
 .form__contakts{
   .fieldset-reset( @margin:0 0 14px 0);
   position: relative;
+
 }
 
 .form__caption {
   .title(@font-size:24px, @line-height:24px, @margin:0 0 34px 0, @padding: 0 20px 0 0);
   background-color: white;
   display: inline-block;
+  position: relative;
 
   &--check {
     margin: 0 0 41px 0;
@@ -244,7 +252,7 @@
 
   .form__title {
     font-size: 60px;
-    padding: 48px 0 0 0;
+    padding: 43px 0 0 0;
     margin: 0 0 55px 0;
   }
 
@@ -358,14 +366,6 @@
       left: 595px;
     }
 
-    &--email::before {
-      top: 20px;
-    }
-
-    &--tel::before {
-      top: 17px;
-    }
-
     &--checkbox {
       padding: 0 0 0 58px;
       margin: 0 0 52px 0;
@@ -395,6 +395,19 @@
         top: 22px;
         transform: translateX(-50%);
       }
+    }
+  }
+
+  .form__icon {
+
+    &--email {
+      top: 20px;
+      left: 595px;
+    }
+
+    &--tel {
+      top: 17px;
+      left: 595px;
     }
   }
 
@@ -444,7 +457,7 @@
   }
 
   .form__title {
-    padding: 66px 0 0 0;
+    padding: 60px 0 0 0;
   }
 
   .form__text {
@@ -550,5 +563,18 @@
   }
   .form__inner {
     margin: 0 0 83px 0;
+  }
+
+  .form__icon {
+
+    &--email {
+      top: 21px;
+      left: 533px;
+    }
+
+    &--tel {
+      top: 18px;
+      left: 531px;
+    }
   }
 }
