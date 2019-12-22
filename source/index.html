@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon/favicon 16x16.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon 32x32.png">
     <script>
-      // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/picturefill.min.js" async=""></script>
     <script src="js/svg4everybody.min.js"></script>
-    <script>svg4everybody (); // run it now or whenever you are ready</script>
+    <script>svg4everybody ();</script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__inner">
         <a class="page-header__logo logo" href="index.html">
@@ -33,7 +38,7 @@
                 <a class="site-list__link site-list__link--white">Главная</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--white"  href="catalog.html">Каталог продукции</a>
+                <a class="site-list__link site-list__link--white" href="catalog.html">Каталог продукции</a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__link site-list__link--white" href="form.html">Подбор программы</a>
@@ -116,8 +121,7 @@
             <li class="info__item info__item--eating">
               Замените один-два приема обычной еды на наше функциональное питание.
             </li>
-            <li class="info__item info__item--month"
-            >Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
+            <li class="info__item info__item--month">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
           </li>
           </ul>
         </div>
@@ -150,7 +154,7 @@
                 <div class="example__photo example__photo--left">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet2x.webp 2x">
                     <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
                     <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
@@ -162,8 +166,7 @@
                   <picture>
                     <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                    <img class="example__after" src="img/after-mobile@1x.png"
-                    srcset="img/after-mobile@2x.png 2x" width="316" height="239">
+                    <img class="example__after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="316" height="239">
                   </picture>
                 </div>
               </div>
@@ -190,7 +193,7 @@
           </div>
         </div>
         <div>
-          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573482547300!5m2!1sru!2sru" width="320" height="364"  style="border:0;" allowfullscreen=""></iframe>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573482547300!5m2!1sru!2sru" width="320" height="364" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </section>
       <div class="footer__box">
@@ -226,9 +229,7 @@
           <div class="footer__copyright copyright">
             <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <svg class="copyright__icon" aria-label="HTML Academy" focusable="false" width="41" height="64">
-                <use xlink:href="img/sprite.svg#htmlacademy"></use>
-              </svg>
+              <img class="copyright__icon" aria-label="HTML Academy" focusable="false" width="41" height="64" src="img/htmlacademy.svg">
             </a>
           </div>
         </div>
