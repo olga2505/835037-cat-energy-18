@@ -3,16 +3,16 @@
     display: flex;
     justify-content: center;
     margin: 0 0 20px 0;
-    padding: 36px 0 31px 0;
+    padding: 43px 0 31px 0;
     border-bottom: @line;
   }
 }
 
 .logo__text {
-
   &:hover {
     opacity: 0.8;
   }
+
   &:active {
     opacity: 0.6;
   }
@@ -21,6 +21,7 @@
 .logo__image {
   position: relative;
   z-index: 10;
+
   &:hover {
     opacity: 0.8;
   }
@@ -30,10 +31,10 @@
   }
 }
 
-@media (min-width:@tablet-width) {
+@media (min-width: @tablet-width) {
   .logo__image {
     width: 173px;
-    height:58px;
+    height: 58px;
   }
 
   .logo {
@@ -44,9 +45,9 @@
   }
 }
 
-@media (min-width:@desktop-width) {
+@media (min-width: @desktop-width) {
   .logo__image {
     width: 202px;
-    height:59px;
+    height: 59px;
   }
 }

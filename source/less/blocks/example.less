@@ -24,7 +24,7 @@
 
 .example__photo {
   &--left {
-  margin: 0 0 -19px 0;
+    margin: 0 0 0 -20px;
   }
 }
 
@@ -66,7 +66,7 @@
 }
 
 .example__expenses {
-  .text(@line-height: 20px, @margin: 0 auto 20px auto, @color: @font-color, @text-transform: uppercase);
+  .text(@line-height: 20px, @margin: 0 auto 19px auto, @color: @font-color, @text-transform: uppercase);
   display: flex;
   justify-content: space-between;
   width: 186px;
@@ -113,14 +113,14 @@
   margin: 0 0 0 5px;
 
   &:hover {
-    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
   }
 
   &:active {
     width: 30px;
     height: 30px;
     border: 11px solid white;
-    box-shadow: 0 0 0 2px @fancy-color, 0px 5px 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0 2px @fancy-color, 0 5px 5px 0 rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -151,10 +151,6 @@
     width: 50%;
     overflow-x: hidden;
     margin: -170px 0 0 0;
-
-    // &--left {
-    //   margin: 0 0 0 0;
-    // }
   }
 
   .example__after {
@@ -168,6 +164,12 @@
 
   .example__value {
     background-color: white;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 5px 0 7px;
+    margin: -7px 0 0 -5px;
+    width: auto;
+    align-self: center;
   }
 
   .example__title {
@@ -178,10 +180,10 @@
   }
 
   .example__text {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 0 51px 0;
-  width: 680px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 51px 0;
+    width: 680px;
   }
 
   .example__effect {
@@ -200,21 +202,12 @@
     flex-direction: column;
   }
 
-  .example__figures{
+  .example__figures {
     width: 162px;
     min-height: 72px;
     padding: 15px 10px 10px 10px;
     font-size: 30px;
     line-height: 37px;
-  }
-
-  .example__value {
-    font-size: 14px;
-    line-height: 14px;
-    padding: 0 5px 0 7px;
-    margin: -7px 0 0 -5px;
-    width: auto;
-    align-self: center;
   }
 
   .example__expenses {
@@ -260,7 +253,7 @@
     border-radius: 50%;
     border: 12px solid white;
     background-color: @fancy-color;
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     margin: 0;
   }
 }
@@ -307,6 +300,7 @@
   .example__inner {
     margin: 0 0 41px 0;
   }
+
   .example__expenses {
     flex-direction: row;
     justify-content: space-between;
@@ -321,21 +315,21 @@
   }
 
   .example__holder {
-    width: 770px;
+    width: 760px;
     margin: -19px 0 0 -92px;
   }
 
   .example__before {
     margin: 0 0 35px 0;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 15px;
   }
 
   .example__after {
     right: 366px;
-    top: 0px;
+    top: 0;
   }
 
-  .example__holder {
-    margin: -19px 0 0 -97px;
+  .example__photo {
+    margin: -171px 0 0;
   }
 }
