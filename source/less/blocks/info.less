@@ -20,6 +20,7 @@
 .info__item {
   margin: 0 0 26px 0;
   position: relative;
+
   &::before {
     .element();
     width: 60px;
@@ -50,9 +51,8 @@
   }
 }
 
-@media(min-resolution:@retina-dppx) {
+@media (min-resolution: @retina-dppx) {
   .info__item {
-
     &::before {
       background-size: 50px 50px;
     }
@@ -85,8 +85,8 @@
   }
 
   .info__title {
-    .title(@font-size:60px, @line-height:60px, @margin:0 0 25px 0, @padding: 15px 0 0 0)
-    }
+    .title(@font-size: 60px, @line-height: 60px, @margin: 0 0 25px 0, @padding: 15px 0 0 0);
+  }
 
   .info__list {
     display: flex;
@@ -128,7 +128,7 @@
 
     &--month::after {
       content: "4";
-      left: 114px
+      left: 114px;
     }
 
     &::before {

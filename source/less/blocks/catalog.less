@@ -4,7 +4,7 @@
 }
 
 .catalog__title {
-  .title(@line-height:60px, @margin:0 0 28px 0, @padding: 15px 0 0 0);
+  .title(@line-height:60px, @margin:0 0 29px 0, @padding: 15px 0 0 0);
   position: relative;
 
   &::before {
@@ -13,7 +13,7 @@
 }
 
 .catalog__list {
-  .list-reset(@margin:0 0 54px 0);
+  .list-reset(@margin:0 0 53px 0);
 }
 
 .catalog__item {
@@ -36,7 +36,7 @@
 }
 
 .catalog__product {
-  .text(@font-size: 16px, @line-height: 20px, @margin: 0 0 10px 0, @color:@font-color, @text-transform: uppercase, @padding: 23px 60px 0 0);
+  .text(@font-size: 16px, @line-height: 20px, @margin: 0 0 12px 0, @color:@font-color, @text-transform: uppercase, @padding: 22px 60px 0 0);
 }
 
 .catalog__characteristics {
@@ -88,20 +88,20 @@
 .catalog__more {
   .text(@font-size: 16px, @margin: 0 auto 8px auto, @color: @font-color, @text-transform: uppercase);
   position: relative;
+
   &::before {
     .element();
     width: 30px;
     height: 30px;
     top: -54px;
     left: 87px;
-    background-image: url(../img/icon-plus-mobile.svg);
+    background-image: url("../img/icon-plus-mobile.svg");
   }
 }
 
 .catalog__text {
   .text(@font-size: 12px, @line-height: 16px, @margin:0 auto 22px auto);
   font-family: @second-font;
-
 }
 
 .catalog__link {
@@ -133,10 +133,10 @@
 
   .catalog__title {
     font-size: 60px;
-    padding: 48px 0 0 0;
+    padding: 43px 0 0 0;
     margin: 0 0 165px 0;
 
-    &:before {
+    &::before {
       display: none;
     }
   }
@@ -166,7 +166,6 @@
   }
 
   .catalog__image {
-
     &--small {
       margin: -46px auto 18px auto;
       width: auto;
@@ -232,7 +231,7 @@
       height: 61px;
       top: -110px;
       left: 46px;
-      background-image: url(../img/icon-plus.svg);
+      background-image: url("../img/icon-plus.svg");
     }
   }
 
@@ -276,7 +275,7 @@
 
     &:nth-last-child(3),
     &:nth-last-child(4) {
-    margin: 0;
+      margin: 0;
     }
   }
 
@@ -294,7 +293,8 @@
     width: 245px;
     min-height: 431px;
   }
-   .catalog__link {
+
+  .catalog__link {
     top: 352px;
     left: 37px;
     width: 169px;
@@ -307,10 +307,9 @@
 
   .catalog__box {
     margin: 0 0 32px 0;
-}
+  }
 
   .catalog__image {
-
     &--small {
       margin: -46px auto 16px auto;
     }
