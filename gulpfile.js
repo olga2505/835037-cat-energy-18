@@ -28,7 +28,6 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -104,9 +103,6 @@ gulp.task("refresh", function (done) {
 
 gulp.task("minify", function () {
   return gulp.src("build/*.html")
-    .pipe(rename({
-      suffix: ".min"
-    }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
@@ -114,9 +110,6 @@ gulp.task("minify", function () {
 gulp.task("compress", function () {
   return gulp.src("build/js/*.js")
   .pipe(uglify())
-  .pipe(rename({
-    suffix: ".min"
-  }))
   .pipe(gulp.dest("build/js/"));
 });
 
