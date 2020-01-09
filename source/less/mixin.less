@@ -30,13 +30,12 @@
   padding: @padding;
 }
 
-.line(@height: 3px, @width: 200vw, @top: 14px, @right: auto, @left: 50%, @background-color: @fancy-color) {
+.line(@height: 3px, @width: 100vw, @top: 14px, @left: 50%, @background-color: @fancy-color) {
   content: "";
   position: absolute;
   width: @width;
   height: @height;
   top: @top;
-  right: @right;
   left: @left;
   background-color: @background-color;
   background-repeat: no-repeat;
@@ -44,10 +43,11 @@
   z-index: -1;
 }
 
-.line-grey(@transform: translateX(-30%)) {
+.line-grey(@transform: translateX(-50%)) {
   content: "";
   position: absolute;
-  width: 200vw;
+  width: 100vw;
+  left: 50%;
   height: 1px;
   background-color: #ededed;
   top: -1px;

@@ -1,16 +1,33 @@
-.map {
+.map__iframe {
   width: 100%;
   display: block;
+  &--nojs {
+    display: none;
+  }
+}
+
+.map__static--none {
+  display: none;
+}
+
+.map__static-img {
+  display: flex;
+  margin: 0;
+  width: 100vw;
 }
 
 @media (min-width: @tablet-width) {
-  .map {
+  .map__iframe {
     height: 396px;
+  }
+
+  .map__static-img {
+    height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .map {
+  .map__iframe {
     height: 400px;
   }
 }

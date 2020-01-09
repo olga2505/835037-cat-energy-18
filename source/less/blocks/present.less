@@ -1,5 +1,6 @@
 .present__wrapp {
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-color: #64a83b;
   width: 280px;
   min-height: 289px;
   display: flex;
@@ -7,7 +8,12 @@
   align-items: flex-end;
   margin: 0;
   position: relative;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px 289px;
+  }
 
   &::before {
     .element();
@@ -42,6 +48,11 @@
     align-items: flex-start;
     justify-content: left;
     padding: 73px 20px 15px 424px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px 200px;
+    }
 
     &::before {
       left: 91px;
