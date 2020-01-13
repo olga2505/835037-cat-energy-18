@@ -245,6 +245,7 @@
 
 .form__order {
   margin: 0 0 21px 0;
+  border: 0;
 }
 
 .form__important {
@@ -366,9 +367,9 @@
   .form__caption {
     font-size: 36px;
     line-height: 36px;
-    margin: 0 0 76px -40px;
-    width: auto;
-    padding: 0 40px;
+    margin: 0 0 76px 0;
+    width: 100%;
+    background-color: transparent;
 
     &--contact::before {
       top: 22px;
@@ -383,14 +384,19 @@
     }
 
     &--check {
-      margin: 0 0 67px -40px;
-      padding: 0 40px;
+      margin: 0 0 67px 0;
 
       &::before {
         top: 22px;
         transform: translateX(-50%);
       }
     }
+  }
+
+  .form__span {
+    background-color: #ffffff;
+    padding: 0 40px;
+    margin: 0 0 0 -40px;
   }
 
   .form__icon {
@@ -488,7 +494,7 @@
   }
 
   .form__caption {
-    margin: 0 0 75px -40px;
+    margin: 0 0 75px 0;
 
     &--contact {
       &::before {
@@ -497,7 +503,7 @@
     }
 
     &--check {
-      margin: 0 0 67px -40px;
+      margin: 0 0 67px 0;
     }
   }
 

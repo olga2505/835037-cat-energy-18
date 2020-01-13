@@ -90,7 +90,11 @@
             </ul>
           </fieldset>
           <fieldset class="form__contakts">
-            <legend class="form__caption form__caption--contact">Контактные данные (владельца кота)</legend>
+            <legend class="form__caption form__caption--contact">
+              <span class="form__span">
+                Контактные данные (владельца кота)
+              </span>
+            </legend>
             <ul class="form__list form__list--contact">
               <li class="form__item form__item--contact">
                 <label class="form__label form__label--contact form__label--email" for="email">E-mail:*</label>
@@ -109,11 +113,19 @@
             </ul>
           </fieldset>
           <div class="form__comment">
-            <p class="form__caption form__caption--comment">Комментарий</p>
+            <p class="form__caption form__caption--comment">
+              <span class="form__span">
+                Комментарий
+              </span>
+            </p>
             <textarea class="form__input form__input--comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <fieldset class="form__addition">
-            <legend class="form__caption form__caption--check">Дополнительно</legend>
+            <legend class="form__caption form__caption--check">
+              <span class="form__span">
+                Дополнительно
+              </span>
+            </legend>
             <ul class="form__list form__list--check">
               <li class="form__item form__item--check">
                 <input class="form__check visually-hidden" type="checkbox" name="caption" id="sweetener" checked>
@@ -151,7 +163,18 @@
           </div>
         </div>
         <div class="map">
-          <iframe class="map__iframe" title="Карта" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573482547300!5m2!1sru!2sru" width="320" height="364" style="border:0;" allowfullscreen=""></iframe>
+          <div class="map__static">
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+              <img class="map__static-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="240" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+            </picture>
+          </div>
+          <iframe class="map__iframe map__iframe--nojs" title="Карта" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573482547300!5m2!1sru!2sru" width="320" height="364" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </section>
       <div class="footer__box">
@@ -195,6 +218,6 @@
     </footer>
     <script src="js/menu.js"></script>
     <script src="js/contact.js"></script>
-
+    <script src="js/map.js"></script>
   </body>
 </html>
