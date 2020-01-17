@@ -6,7 +6,6 @@
   height: 305px;
   overflow-y: hidden;
   position: absolute;
-  background-color: #64a83b;
   width: 100vw;
 }
 
@@ -50,7 +49,7 @@
 }
 
 @media (min-resolution: @retina-dppx),
-(min-resolution: 144dpi) {
+  (min-resolution: @retina-dpi) {
   .food__image::before {
     background-image: url("../img/index-can-mobile@2x.png");
     background-size: 280px 270px;
@@ -97,7 +96,7 @@
   }
 
   @media (min-resolution: @retina-dppx),
-  (min-resolution: 144dpi) {
+    (min-resolution: @retina-dpi) {
     .food__image::before {
       background-image: url("../img/index-can-tablet@2x.jpg");
       background-size: 709px 609px;
@@ -173,7 +172,7 @@
   }
 
   @media (min-resolution: @retina-dppx),
-  (min-resolution: 144dpi) {
+    (min-resolution: @retina-dpi) {
     .food__image::before {
       background-image: url("../img/index-can-desktop@2x.png");
       background-size: 552px 499px;
