@@ -23,7 +23,7 @@
     </div>
     <header class="page-header">
       <div class="page-header__inner">
-        <a class="page-header__logo logo" href="#">
+        <a class="page-header__logo logo">
           <picture>
             <source media="(min-width:1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
@@ -52,14 +52,7 @@
     </header>
     <main class="page-main">
       <div class="food">
-        <div class="food__cat-image">
-          <picture>
-            <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-background-desktop@1x.webp 1x, img/index-background-desktop@2x.webp 2x">
-            <source type="image/webp" srcset="img/index-background-mobile@1x.webp 1x, img/index-background-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1300px)" srcset="img/index-background-desktop@1x.png 1x, img/index-background-desktop@2x.png 2x">
-            <img class="food__background" src="img/index-background-mobile@1x.png" srcset="img/index-background-mobile@2x.png 2x" width="320" height="305" alt="Cat Energy">
-          </picture>
+        <div class="food__cat-background">
         </div>
         <div class="food__wrapper">
           <div class="food__inner">
@@ -168,11 +161,11 @@
                 </div>
               </div>
               <div class="example__before-after">
-                <button class="example__difference">Было</button>
+                <button class="example__difference" type="button">Было</button>
                 <div class="example__scale">
                   <div class="example__inner-scale"></div>
                 </div>
-                <button class="example__difference">Стало</button>
+                <button class="example__difference" type="button">Стало</button>
               </div>
             </div>
           </div>
@@ -182,11 +175,13 @@
     <footer class="footer">
       <section class="cooperation cooperation--index">
         <h2 class="visually-hidden">Адрес</h2>
-        <div class="cooperation__wrapper">
-          <p class="cooperation__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <div class="cooperation__address">
-            <p class="cooperation__street">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="cooperation__city">Санкт-Петербург</p>
+        <div class="cooperation__box">
+          <div class="cooperation__wrapper">
+            <p class="cooperation__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <div class="cooperation__address">
+              <p class="cooperation__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="cooperation__city">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <div class="map">
